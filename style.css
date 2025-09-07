@@ -1,0 +1,543 @@
+
+/* ======================================================
+    Codes: Vert #00d4b4 / Noir #111111 / Gris dbdbdb
+======================================================== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+}
+
+:root {
+  --primary-color: #00d4b4;
+  --dark-color: #111111;
+  --light-color: #dbdbdb;
+  --text-color: #333;
+}
+
+
+/* Animation d'apparition au scroll */
+section {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+section.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
+/* =========================
+   CONTAINERS
+========================= */
+.contaifner {
+  width: 95%;
+  margin: 0 auto;
+}
+
+/* ========================= HEADER ========================= */
+header {
+  background: #111111;
+  color: white;
+  padding: 30px 100px;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+header .section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header .logo h1 {
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+header .logo h1:hover{
+  cursor: pointer;
+}
+
+header .logo span {
+  color: var(--primary-color);
+}
+
+header nav ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+header nav a {
+  text-decoration: none;
+  color: white;
+  font-size: 1rem;
+  transition: color 0.3s;
+}
+
+header nav a:hover {
+  color: var(--primary-color);
+}
+
+
+
+/* ========================= SECTION ACCUEIL  ========================= */
+#accueil {
+  height: 100vh;
+  padding: 0;
+  margin: 0;
+}
+
+.accueil {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0 100px;
+  gap: 100px;
+
+}
+
+.accudeil-text {
+  width: 800px;
+}
+
+.accueil-text h2 {
+  font-size: 1.9em;
+  margin-bottom: 20px;
+}
+
+.accueil-text .highlight {
+  color: var(--primary-color);
+}
+
+.accueil-text .btn-primary {
+  display: inline-block;
+  background: var(--primary-color);
+  color: white;
+  padding: 12px 25px;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.accueil-text .btn-primary:hover {
+  background: #00bca1;
+}
+
+.accueil-image img {
+width: 300px;
+margin: 0px 30px;
+}
+
+/* ========================= SECTION A-PROPOS  ========================= */
+
+#apropos {
+  height: 100vh;
+  padding: 0;
+  margin: 0;
+  background:rgb(212, 211, 211)
+}
+
+.apropos {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content:space-between;
+  height: 100vh;
+  margin: 80px 50px;
+  padding: 0;
+  gap: 00px;
+  align-items:start;
+
+}
+
+h3 {
+  color: var(--primary-color);
+  font-size: 1.5rem;
+  padding-top: 80px;
+  text-align: center;
+  margin: 0;
+}
+
+.apropos-text p {
+  margin-bottom: 15px;
+  font-size: 1.2em;
+}
+
+.apropos-text .btn-secondary {
+  display: inline-block;
+  background: var(--primary-color);
+  color: white;
+  padding: 10px 20px;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: 0.3s;
+  font-weight: 600;
+}
+
+.apropos-text .btn-secondary:hover {
+  background: #00bca1;
+}
+
+.apropos-image img {
+  max-width: 200px;
+  width: 100%;
+  border-radius: 50%;
+  border: 3px solid var(--primary-color);
+  margin-right: 80px;
+}
+
+.apropos-text .highlight {
+  color: var(--primary-color);
+}
+
+
+/* ========================= SECTION PROJET  ========================= */
+#project {
+  height: 100vh;
+  padding: 0px 0;
+  text-align: center;
+  padding: 0px 25px;
+
+}
+
+#project h3 {
+  color: var(--primary-color);
+  font-size: 1.8rem;
+  margin-bottom: 30px;
+}
+
+.project-grid {
+  min-height: 200px;
+  align-items: center;
+  text-align: center;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+}
+
+.project-card {
+  width: 400px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  min-height: 300px;
+  background: rgb(214, 213, 213);
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s;
+}
+
+.project-card img{
+  display: block;
+  width: 100%;
+  object-fit: cover;
+  height: 150px;
+  margin: 0;
+  padding: 0;
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+}
+
+.project-card p{
+  padding: 20px;
+}
+.project-card .tags {
+  display: block;
+  margin: 10px 30px;
+  color: var(--primary-color);
+  font-size: 0.9rem;
+}
+
+.project-card .btn-primary {
+  background: var(--primary-color);
+  color: white;
+  padding: 8px 18px;
+  margin-bottom: 20px;
+  border-radius: 6px;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.project-card .btn-primary:hover {
+  background: #00bca1;
+}
+
+/* ========================= SECTION COMPETENCE  ========================= */
+#competence {
+  height: 100vh;
+  background: #dbdbdb;
+}
+
+#competence h3 {
+  text-align: center;
+  font-size: 1.8rem;
+  margin-bottom: 40px;
+}
+
+.competenceZone {
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+  flex-wrap: wrap;
+}
+
+.skills-box {
+  max-width: 400px;
+  width: 100%;
+  background-color: #ffffff;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: #111111 50px;
+}
+
+.skills-box h4 {
+  margin-bottom: 15px;
+  font-size: 1.3rem;
+}
+
+.skills-box ul {
+  list-style: none;
+}
+
+.skills-box li {
+  margin-bottom: 15px;
+}
+
+.skills-box .bar {
+  display: block;
+  height: 8px;
+  background: #ddd;
+  border-radius: 4px;
+  overflow: hidden;
+  margin-top: 5px;
+}
+
+.skills-box .bar span {
+  display: block;
+  height: 8px;
+  background: var(--primary-color);
+}
+
+/* ========================= SECTION CONTACT  ========================= */
+#contact {
+  padding: 0;
+  background: #111111;
+  color: white;
+  text-align: center;
+}
+
+#contact h3 {
+  font-size: 1.8rem;
+  margin-bottom: 30px;
+  color: #ffffff;
+}
+
+#contact h3 em{
+  font-weight: 400;
+  font-style: normal;
+}
+
+#contact .highlight {
+  color: #00d4b4;
+}
+
+#contact form {
+  max-width: 600px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+#contact .form-row {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+#contact input,
+#contact textarea {
+  width: 100%;
+  padding: 10px;
+  border: #00bca1 solid 1px;
+  border-radius: 6px;
+  font-size: 1rem;
+}
+
+#contact textarea {
+  min-height: 120px;
+  resize: none;
+}
+
+#contact .btn-primary {
+  background: #00d4b4;
+  color: white;
+  border: none;
+  padding: 12px;
+  cursor: pointer;
+  border-radius: 8px;
+  transition: 0.3s;
+}
+
+#contact .btn-primary:hover {
+  background: #00bca1;
+}
+
+/* ========================= FOOTER ========================= */
+footer {
+  background: var(--dark-color);
+  color: white;
+  text-align: center;
+  padding: 15px 0;
+  font-size: 0.9rem;
+}
+
+footer .highlight {
+  color: var(--primary-color);
+}
+
+/* =========================RESPONSIVE DESIGN ========================= */
+@media (max-width: 768px) {
+  .accueil,
+  .about-content,
+  .section{
+    flex-direction: column;
+    text-align: center;
+  }
+
+  header nav a {
+  font-size: 0.7em;
+  font-weight: 500;
+}
+
+
+
+  .skills-content {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  header{
+    padding: 20px 20px;
+  }
+
+header .logo h1 {
+  font-size: 1rem;
+  font-weight: bold;
+  padding-bottom: 10px;
+}
+
+/* =====SECTION ACCUEIL  ========================= */
+#accueil {
+  display: flex;
+  flex-direction:column;
+  justify-content: center;
+  height: 100vh;
+  padding: 0;
+  margin: 0 20px;
+}
+
+.accueil {
+  display: flex;
+  flex-wrap: wrap;
+  text-align: center;
+  margin: 0;
+  gap: 0;
+}
+
+.accueil-text {
+  max-width: 100%;
+}
+
+.accueil-text h2 {
+  font-size: 1.7em;
+}
+
+.accueil-text .btn-primary {
+  display: inline-block;
+  background: var(--primary-color);
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: 0.3s;
+  margin-bottom: 50px;
+}
+
+.accueil-text .btn-primary:hover {
+  background: #00bca1;
+}
+
+.accueil-image img {
+  max-width: 50%;
+  width: 100%;
+}
+
+
+/* ========================= SECTION A-PROPOS  ========================= */
+
+.apropos {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  height: 100vh;
+  margin: 20px 20px;
+  padding: 0;
+  text-align: center;
+
+}
+
+h3 {
+  color: #00bca1;
+  font-size: 1.2em;
+  padding-top: 70px;
+  text-align: center;
+  margin: 0;
+}
+
+.apropos-text p {
+  margin-bottom: 15px;
+  font-size: 0.9em;
+  text-align:center;
+  padding: 0;
+}
+
+.apropos-text .btn-secondary {
+  display: inline-block;
+  background: var(--primary-color);
+  color: white;
+  padding: 10px 20px;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: 0.3s;
+  font-weight: 600;
+}
+
+.apropos-image{
+  margin: 0;
+  padding: 0;
+}
+
+.apropos-imagfe img {
+  border-radius: 50%;
+  border: 2px solid var(--primary-color);
+  margin-right: 0px;
+  text-align: center;
+}
+
+
+
+}

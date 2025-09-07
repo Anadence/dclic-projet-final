@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio - Prudence ANATO</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script defer src="script.js"></script>
+</head>
+<body>
+
+  <!-- ======== HEADER ======== -->
+  <header>
+    <div class="section">
+      <div class="logo">
+        <h1>ANATO <span>PRUDENCE</span></h1>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="#accueil">Accueil</a></li>
+          <li><a href="#apropos">À propos</a></li>
+          <li><a href="#project">Projets</a></li>
+          <li><a href="#skills">Compétences</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ======== SECTION ACCUEIL ======== -->
+  <section id="accueil">
+    <div class="accueil">
+      <div class="accueil-text">
+        <h2>Je suis <span class="highlight">Prudence</span>, Développeur en devenir passionné par le web et le design !</h2>
+        <a href="#project" class="btn-primary">Voir mes projets</a>
+      </div>
+      <div class="accueil-image">
+        <img src="/images/hero-image.png" alt="Illustration de développeur">
+      </div>
+    </div>
+  </section>
+
+  <!-- ======== SECTION A-PROPOS ======== -->
+  <section id="apropos">
+      <h3>À propos</h3>
+    <div class="apropos">
+      <div class="apropos-text">
+        <p>Je m'appelle <span class="highlight">ANATO</span>, passionné par la 
+          <br>création de sites web modernes et interactifs.</p>
+        <p>Je suis actuellement étudiant en <span class="highlight">développement web</span>,<br>
+          et je cherche à améliorer mes compétences en JavaScript, HTML et CSS.</p>
+        <p>J'adore transformer mes idées en projets concrets <br>
+          et expérimenter avec les nouvelles technologies.</p>
+        <a href="cv.pdf" class="btn-secondary" download>Télécharger mon CV</a>
+      </div>
+      <div class="apropos-image">
+        <img src="/images/profil.jpg" alt="Photo de profil">
+      </div>
+    </div>
+  </section>
+
+  <!-- ======== SECTION PROJECT ======== -->
+  <section id="project">
+    <div class="projet">
+      <h3>Mes Projets</h3>
+      <div class="project-grid">
+        <div class="project-card">
+          <img src="/images/projet1.png" alt="">
+          <p>Un gestionnaire complet de base de données clients en HTML + CSS + JavaScript.</p>
+          <span class="tags">#html #css #js</span>
+          <a href="/projet1.html" class="btn-primary">Voir</a>
+        </div>
+        <div class="project-card">
+          <img src="/images/projet2.png" alt="">
+          <p>Un gestionnaire complet de base de données clients en HTML + CSS + JavaScript.</p>
+          <span class="tags">#html #css #js</span>
+          <a href="/projet2.html" class="btn-primary">Voir</a>
+        </div>
+        <div class="project-card">
+          <img src="/images/projet3.jpg" alt="">
+          <p>Un mini-jeu interactif en JavaScript qui utilise des événements DOM.</p>
+          <span class="tags">#html #css #js</span>
+          <a href="#" class="btn-primary">Voir</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======== SKILLS ======== -->
+  <section id="skills">
+    <div class="container">
+      <h3>Mes Compétences</h3>
+      <div class="skills-content">
+        <!-- Soft Skills -->
+        <div class="skills-box">
+          <h4>Soft Skills</h4>
+          <ul>
+            <li>Gestion de projet <span class="bar"><span style="width: 90%"></span></span></li>
+            <li>Résolution de problème <span class="bar"><span style="width: 85%"></span></span></li>
+            <li>Adaptabilité <span class="bar"><span style="width: 80%"></span></span></li>
+          </ul>
+        </div>
+        <!-- Hard Skills -->
+        <div class="skills-box">
+          <h4>Hard Skills</h4>
+          <ul>
+            <li>HTML <span class="bar"><span style="width: 95%"></span></span></li>
+            <li>CSS <span class="bar"><span style="width: 90%"></span></span></li>
+            <li>JavaScript <span class="bar"><span style="width: 80%"></span></span></li>
+            <li>VS Code <span class="bar"><span style="width: 85%"></span></span></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======== CONTACT ======== -->
+  <section id="contact">
+    <div class="container contact-content">
+      <h3>Vous avez un <span class="highlight">projet en tête</span> ?<br>N'hésitez pas à me <span class="highlight">contacter</span></h3>
+      <form id="contactForm">
+        <div class="form-row">
+          <input type="text" name="prenom" placeholder="Votre prénom" required>
+          <input type="text" name="nom" placeholder="Votre nom" required>
+        </div>
+        <input type="email" name="email" placeholder="Votre email" required>
+        <input type="text" name="sujet" placeholder="Votre sujet" required>
+        <textarea name="message" placeholder="Votre message" required></textarea>
+        <button type="submit" class="btn-primary">Envoyer</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- ======== FOOTER ======== -->
+  <footer>
+    <p>Designed by <span class="highlight">Prudence</span> with HTML, CSS, JS</p>
+    <p>&copy; 2025 Tous droits réservés</p>
+  </footer>
+
+</body>
+</html>
